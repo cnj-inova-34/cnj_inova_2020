@@ -1,9 +1,9 @@
-# ***SOLUÇÃO PREDITIVA - TEMPO DE PROCESSO***
+# ***SOLUÇÃO PREDITIVA - TEMPO DE DECISÃO***
 
 **Equipe**: cnj_inova_34  
 **Membros**
-- Henrique Bona
 - Thiago Gontijo
+- Henrique Bona
 
 ## HISTÓRIAS / DORES DOS USUÁRIOS
 ### **RELATO 03: CIDADÃO - AÇÃO NA VARA DE FAMÍLIA**
@@ -25,16 +25,16 @@ Gostaria que o próprio sistema a ajudasse a sanear esses equívocos.
 
 ## DESCRIÇÃO DA SOLUÇÃO PROPOSTA
 
-A **SOLUÇÃO PREDITIVA - TEMPO DO PROCESSO** apresenta painéis inovadores que permitem, na primeira instância da Justiça Federal: 
-1. **PREDIÇÃO DE TEMPO ESTIMADO DO PROCESSO**: predição do tempo estimado para julgamento de cada processo - com ou sem resolução do mérito -, e 
-2. **ESTATÍSTICAS DO TEMPO DE JULGAMENTO**: análise estatística dos tempos médios de tramitação processual, desde o ajuizamento até a decisão final.
+A **SOLUÇÃO PREDITIVA - TEMPO DE DECISÃO** apresenta painéis inovadores que permitem, na primeira instância da Justiça Federal: 
+1. **ANÁLISE PREDITIVA | PREVISÃO DE TEMPO PARA DECISÃO**: predição do tempo estimado para julgamento de cada processo - com ou sem resolução do mérito -, e 
+2. **ESTATÍSTICAS | TEMPO MÉDIO DA DECISÃO**: análise estatística dos tempos médios de tramitação processual, desde o ajuizamento até a decisão final.
 
-### Painel PREDIÇÃO DE TEMPO ESTIMADO DO PROCESSO
+### Painel ANÁLISE PREDITIVA | PREVISÃO DE TEMPO PARA DECISÃ
 Permite que o usuário tenha conhecimento do tempo estimado para o julgamento do processo na primeira instância. 
 Previsão que é realizada a partir do cotejo personalizado dos dados processuais de cada caso com os metadados constantes da base de dados do DataJud.
 São consideradas como variáveis as informações de Tribunal, Classe Processual, Juízo, Assunto Principal e Assuntos Complementares. 
 
-### Painel ESTATÍSTICAS DO TEMPO DE JULGAMENTO
+### Painel ESTATÍSTICAS | TEMPO MÉDIO DA DECISÃO
 Plataforma dinâmica, simples e intuitiva, que possibilita ao usuário uma experiência prática e efetiva sobre o tempo de tramitação processual
 até a decisão final, na primeira instância da Justiça Federal, com ou sem mérito.
 
@@ -66,6 +66,8 @@ Após da extração, transformação e análise dos dados, chegasse ao indicador
 realizado através de painéis QlikSense.
 
 Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
+
+**Instruções mais detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
 
 
 ## EVOLUÇÕES SUGERIDAS

@@ -48,11 +48,8 @@ Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que im
 
 
 ## ARQUITETURA DA SOLUÇÃO E FLUXO DE DADOS
-
-**Instruções detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
-
-
 A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
+
 Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
 
 Link para o ambiente JupiterLab hospedado no Azure: https://data-comp.brazilsouth.instances.azureml.ms/lab
@@ -75,7 +72,36 @@ Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
 
 
 
+## INSTRUÇÕES DE USO
+**Instruções detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
 
+A primeira parte da solução é executada em Jupyter Notebooks, esses hospedados no Microsoft Azure.
+
+Os Jupyter Notebooks alcançaram grande sucesso, entre outros méritos, pelo fato de permitir permiar o código com explicações sobre o mesmo. Nesse sentido, os notebooks são auto-explicativos, e apresentados na ordem que devem ser executados.
+
+A camada de visualização da solução, interface com o usuário, foi desenvolvida no QlikSense. Por sua vez, o Qlik é famoso pela sua fácil utilização e amigabilidade com o usuário.
+
+Pensamos que, se precisar de muita explicação, a interface não é boa e intuitiva o suficiente. Mas fica uma dica: **no QlikSense, quase tudo que você vê na tela pode ser clicado, e a seleção refletirá os dados na tela**. 
+
+Boa diversão!!!
+
+
+
+## LICENÇAS UTILIZADAS
+O Jupyter Notebook está hospedado no Microsoft Azure para conveniência dos jurados, os quais contarão com uma solução funcional sem nenhuma necessidade de configuração local. De forma que não há nenhuma licença envolvida nessa etapa.
+
+No ambiente de produção, cabe ao cliente escolher a plataforma onde desejará hospedar a solução, podendo ser rodado em qualquer ambiente operacional, inclusive em computadores locais.
+
+Com relação a interface do usuáruio, que roda no QlikSense, foi escolhido pois o CNJ possui licenças para o utilização do mesmo, e pode usar essa tecnologia caso assim o deseje.
+
+Todavia, o motivo principal da escolha foi o curto tempo disponível para desenvolvimento. Com a intenção de entregar a melhor interface possível, no tempo disponível, o QlikSense se mostrou uma boa escolha.
+
+Por fim, e caso o licenciamento se mostre um empecilho, sugere-se a evolução da solução e construção de uma interface com o usuário baseada em HTML5 e livre de ônus de licenciamento.
+
+
+
+
+## ÁREAS DE CONHECIMENTO E TÉCNICAS ENVOLVIDAS
 
 
 

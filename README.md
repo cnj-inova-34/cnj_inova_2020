@@ -66,7 +66,7 @@ Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que im
 ## ARQUITETURA DA SOLUÇÃO E FLUXO DE DADOS
 A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
 
-Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
+Para tal, os dados provenientes do DataJud são sucessivamente tratrados, utilizando notebooks jupyter e linguagem python.
 
 O processo de extração dos dados é descrito pela figura abaixo:
 ![extracao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_extracao_dados.png?raw=true)
@@ -76,7 +76,7 @@ Feita a extração dos dados, segue a transformação dos mesmos:
 ![transformacao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_tranformacao_dados.png?raw=true)
 
 
-Após da extração, transformação - permeada pela análise dos dados - produz-se 0 indicador desejado. Posteriormente, a visualização do mesmo para o cliente é
+Após da extração, transformação - permeada pela análise dos dados - produz-se o indicador desejado. Posteriormente, a visualização do mesmo para o cliente é
 realizado através de painéis QlikSense:
 ![interface_usuario](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_interface_usuario.png?raw=true)
 
@@ -126,7 +126,7 @@ Solução multidisciplinar que envolve, entre outras, as seguintes competências
 
 ## EVOLUÇÕES SUGERIDAS
 
-1. Portar a solução de NoteBooks Jupiter para um serviço REST, de forma que os arquivos de dados JSON possam ser consumidos continuamente, e alimentar a base de indicadores em tempo real;
+1. Portar a solução de Jupyter Notebook para um serviço REST, de forma que os arquivos de dados JSON possam ser consumidos continuamente, e alimentar a base de indicadores em tempo real;
 2. Ampliar o cálculo de dados para todos os tribunais disponíveis na base do DataJud;
 3. Caso haja problemas de licenciamento, evoluir a interface QlikSense para tecnologias como HTML5
 4. Melhorar a qualidade dos dados.

@@ -41,8 +41,42 @@ até a decisão, na primeira instância da Justiça Federal, com ou sem mérito.
 
 ## PRINCIPAIS MÉTRICA DA SOLUÇÃO
 A métrica utilizada na solução proposta e a **média de tempo decorrido entre o ajuizamento do processo, e a primeira decisão relevante do mesmo**.
+
 Ressalta-se a importância da **relevância da decisão**, visto que várias decisões são tomadas ao longo do processo. Sendo várias delas relacionadas aos trãmites processuais, e não ao julgamento do processo em si.
+
 Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que importa para as partes envolvidas no processo.
+
+
+## ARQUITETURA DA SOLUÇÃO E FLUXO DE DADOS
+
+**Instruções detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
+
+
+A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
+Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
+
+Link para o ambiente JupiterLab hospedado no Azure: https://data-comp.brazilsouth.instances.azureml.ms/lab
+
+
+O processo de extração dos dados é descrito pela figura abaixo:
+![extracao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_extracao_dados.png?raw=true)
+
+
+Feita a extração dos dados, segue a transformação dos mesmos:
+![transformacao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_tranformacao_dados.png?raw=true)
+
+
+Após da extração, transformação e análise dos dados, chegasse ao indicador desejado. Posteriormente, a visualização dos mesmos para o cliente é
+realizado através de painéis QlikSense.
+![interface_usuario](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_interface_usuario.png?raw=true)
+
+
+Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
+
+
+
+
+
 
 
 ## ESCOPO DA SOLUÇÃO
@@ -59,21 +93,6 @@ informações necessárias para o cálculo dos indicadores de tempo de tramitaç
 
 Pelo mesmo motivo de limitação de tempo, optou-se por fazer a análise dos dados com base no "assunto principal" do processo. Todavia, não há perdas
 significativas, visto que os "assuntos complementares" podem ser derivados a partir do "assunto principal".
-
-
-## TECNOLOGIAS UTILIZADAS 
-
-A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
-Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
-
-Link para o ambiente JupiterLab hospedado no Azure: https://data-comp.brazilsouth.instances.azureml.ms/lab
-
-Após da extração, transformação e análise dos dados, chegasse ao indicador desejado. Posteriormente, a visualização dos mesmos para o cliente é
-realizado através de painéis QlikSense.
-
-Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
-
-**Instruções mais detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
 
 
 ## EVOLUÇÕES SUGERIDAS

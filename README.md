@@ -29,7 +29,7 @@ A **SOLUÇÃO PREDITIVA - TEMPO DE DECISÃO** apresenta painéis inovadores que 
 1. **ANÁLISE PREDITIVA | PREVISÃO DE TEMPO PARA DECISÃO**: predição do tempo estimado para julgamento de cada processo - com ou sem resolução do mérito -, e 
 2. **ESTATÍSTICAS | TEMPO MÉDIO DA DECISÃO**: análise estatística dos tempos médios de tramitação processual, desde o ajuizamento até a decisão final.
 
-### Painel ANÁLISE PREDITIVA | PREVISÃO DE TEMPO PARA DECISÃ
+### Painel ANÁLISE PREDITIVA | PREVISÃO DE TEMPO PARA DECISÃO
 Permite que o usuário tenha conhecimento do tempo estimado para o julgamento do processo na primeira instância. 
 Previsão que é realizada a partir do cotejo personalizado dos dados processuais de cada caso com os metadados constantes da base de dados do DataJud.
 São consideradas como variáveis as informações de Tribunal, Classe Processual, Juízo, Assunto Principal e Assuntos Complementares. 

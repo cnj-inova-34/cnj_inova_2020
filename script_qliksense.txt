@@ -1,0 +1,63 @@
+//**************************************************************
+//
+// ARQUIVO COM SCRIPT DE CARGA DE DADOS DO APLICATIVO QLIKSENSE
+//
+//**************************************************************
+
+// Configurações do ambiente
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='R$#.##0,00;-R$#.##0,00';
+SET TimeFormat='hh:mm:ss';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='pt-BR';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='jan;fev;mar;abr;mai;jun;jul;ago;set;out;nov;dez';
+SET LongMonthNames='janeiro;fevereiro;março;abril;maio;junho;julho;agosto;setembro;outubro;novembro;dezembro';
+SET DayNames='seg;ter;qua;qui;sex;sáb;dom';
+SET LongDayNames='segunda-feira;terça-feira;quarta-feira;quinta-feira;sexta-feira;sábado;domingo';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+//Carga de dados
+for each file in filelist('lib://DataFiles/tab_processo_indicador*.csv')
+	
+  [INDICADOR_CNJ_INOVA]:
+  LOAD
+        dadosBasicos_numero as [Número Único],
+        siglaTribunal as [Tribunal],
+        Year(data_ajuizamento) as [Ano de Autuação],
+        descricao_classe as [Classe],
+        descricao_classe_pai as [Classe Pai],
+        descricao_assunto as [Assunto Complementar],
+        descricao_assunto_pai as [Assunto Principal],
+        dadosBasicos_orgaoJulgador_nomeOrgao as [Órgão],
+        Num#(Replace(Text(anos_para_decisao), '.', ',')) as [Anos para Decisão],
+        data_ajuizamento,
+    	data_ajuizamento_str,
+        data_movimento,
+    	data_movimento_str,
+        floor(Num#(Replace(Text(anos_para_decisao), '.', ','))) as [Anos para Decisão Inteiro],
+        descricao_movimento,
+    	descricao_movimento_pai
+  FROM [$(file)]
+  (txt, utf8, embedded labels, delimiter is ',', msq)
+  where grau = 'G1'; 
+
+
+//Remove valores considerados muito baixos... provavelmente erro em conversões de datas
+Next file
+Inner Join([INDICADOR_CNJ_INOVA])
+Load 
+	[Número Único]
+Resident 
+	[INDICADOR_CNJ_INOVA]
+where
+	[Anos para Decisão] > 0.15;

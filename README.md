@@ -39,72 +39,6 @@ Plataforma dinâmica, simples e intuitiva, que possibilita ao usuário uma exper
 até a decisão, na primeira instância da Justiça Federal, com ou sem mérito.
 
 
-## PRINCIPAIS MÉTRICA DA SOLUÇÃO
-A métrica utilizada na solução proposta e a **média de tempo decorrido entre o ajuizamento do processo, e a primeira decisão relevante do mesmo**.
-
-Ressalta-se a importância da **relevância da decisão**, visto que várias decisões são tomadas ao longo do processo. Sendo várias delas relacionadas aos trãmites processuais, e não ao julgamento do processo em si.
-
-Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que importa para as partes envolvidas no processo.
-
-
-## ARQUITETURA DA SOLUÇÃO E FLUXO DE DADOS
-A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
-
-Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
-
-Link para o ambiente JupiterLab hospedado no Azure: https://data-comp.brazilsouth.instances.azureml.ms/lab
-
-
-O processo de extração dos dados é descrito pela figura abaixo:
-![extracao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_extracao_dados.png?raw=true)
-
-
-Feita a extração dos dados, segue a transformação dos mesmos:
-![transformacao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_tranformacao_dados.png?raw=true)
-
-
-Após da extração, transformação e análise dos dados, chegasse ao indicador desejado. Posteriormente, a visualização dos mesmos para o cliente é
-realizado através de painéis QlikSense.
-![interface_usuario](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_interface_usuario.png?raw=true)
-
-
-Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
-
-
-
-## INSTRUÇÕES DE USO
-**Instruções detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
-
-A primeira parte da solução é executada em Jupyter Notebooks, esses hospedados no Microsoft Azure.
-
-Os Jupyter Notebooks alcançaram grande sucesso, entre outros méritos, pelo fato de permitir permiar o código com explicações sobre o mesmo. Nesse sentido, os notebooks são auto-explicativos, e apresentados na ordem que devem ser executados.
-
-A camada de visualização da solução, interface com o usuário, foi desenvolvida no QlikSense. Por sua vez, o Qlik é famoso pela sua fácil utilização e amigabilidade com o usuário.
-
-Pensamos que, se precisar de muita explicação, a interface não é boa e intuitiva o suficiente. Mas fica uma dica: **no QlikSense, quase tudo que você vê na tela pode ser clicado, e a seleção refletirá os dados na tela**. 
-
-Boa diversão!!!
-
-
-
-## LICENÇAS UTILIZADAS
-O Jupyter Notebook está hospedado no Microsoft Azure para conveniência dos jurados, os quais contarão com uma solução funcional sem nenhuma necessidade de configuração local. De forma que não há nenhuma licença envolvida nessa etapa.
-
-No ambiente de produção, cabe ao cliente escolher a plataforma onde desejará hospedar a solução, podendo ser rodado em qualquer ambiente operacional, inclusive em computadores locais.
-
-Com relação a interface do usuáruio, que roda no QlikSense, foi escolhido pois o CNJ possui licenças para o utilização do mesmo, e pode usar essa tecnologia caso assim o deseje.
-
-Todavia, o motivo principal da escolha foi o curto tempo disponível para desenvolvimento. Com a intenção de entregar a melhor interface possível, no tempo disponível, o QlikSense se mostrou uma boa escolha.
-
-Por fim, e caso o licenciamento se mostre um empecilho, sugere-se a evolução da solução e construção de uma interface com o usuário baseada em HTML5 e livre de ônus de licenciamento.
-
-
-
-
-## ÁREAS DE CONHECIMENTO E TÉCNICAS ENVOLVIDAS
-
-
-
 ## ESCOPO DA SOLUÇÃO
 
 **EMBORA HAJA REDUÇÃO DE ESCOPO DO PONTO DE VISTA DE TRIBUNAIS ANALISADOS, A SOLUÇÃO PROPOSTA FOI CONSTRUÍDA TENDO EM MENTE SER APLICADA - COM POUCA
@@ -119,6 +53,75 @@ informações necessárias para o cálculo dos indicadores de tempo de tramitaç
 
 Pelo mesmo motivo de limitação de tempo, optou-se por fazer a análise dos dados com base no "assunto principal" do processo. Todavia, não há perdas
 significativas, visto que os "assuntos complementares" podem ser derivados a partir do "assunto principal".
+
+
+## PRINCIPAIS MÉTRICA DA SOLUÇÃO
+A métrica utilizada na solução proposta e a **média de tempo decorrido entre o ajuizamento do processo e a primeira decisão relevante do mesmo**.
+
+Ressalta-se a importância da **relevância da decisão**, visto que várias decisões são tomadas ao longo do processo. Sendo várias delas relacionadas aos trãmites processuais, e não ao julgamento do processo em si.
+
+Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que importa para as partes envolvidas no processo.
+
+
+## ARQUITETURA DA SOLUÇÃO E FLUXO DE DADOS
+A solução proposta exige o cálculo do indicador de tempo transcorrido desde ajuizamento do processo até o julgamento e decisão do mesmo.
+
+Para tal, os dados provenientes do DataJud são sucessivamente tratrados utilizando notebooks jupyter e linguagem python.
+
+O processo de extração dos dados é descrito pela figura abaixo:
+![extracao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_extracao_dados.png?raw=true)
+
+
+Feita a extração dos dados, segue a transformação dos mesmos:
+![transformacao_dados](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_tranformacao_dados.png?raw=true)
+
+
+Após da extração, transformação - permeada pela análise dos dados - produz-se 0 indicador desejado. Posteriormente, a visualização do mesmo para o cliente é
+realizado através de painéis QlikSense:
+![interface_usuario](https://github.com/cnj-inova-34/cnj_inova_2020/blob/main/imagens/cnj_inova_interface_usuario.png?raw=true)
+
+
+## INSTRUÇÕES DE USO
+**Instruções detalhadas de acesso ao ambiente de teste estão no arquivo "acesso_ambiente_teste_equipe_34.pdf"**
+
+A primeira parte da solução é executada em Jupyter Notebooks, esses hospedados no Microsoft Azure.
+
+Link para o ambiente JupiterLab hospedado no Azure: https://data-comp.brazilsouth.instances.azureml.ms/lab
+
+O Jupyter Notebook alcançou grande sucesso, entre outros méritos, pelo fato de permitir permear o código com explicações sobre o mesmo. Nesse sentido, os notebooks são auto-explicativos, e apresentados na ordem que devem ser executados.
+
+
+A camada de visualização da solução, interface com o usuário, foi desenvolvida no QlikSense. Por sua vez, o Qlik é famoso pela sua fácil utilização e amigabilidade com o usuário.
+
+Link para o ambiente QlikSense Cloud: https://vc89vy4bxhgztcd.us.qlikcloud.com/
+
+Pensamos que, se precisar de muita explicação, a interface não é boa e intuitiva o suficiente. Mas fica uma dica: **no QlikSense, quase tudo que você vê na tela pode ser clicado, e a seleção refletirá os dados na tela**. 
+
+**Boa diversão!!!**
+
+
+## LICENÇAS UTILIZADAS
+O Jupyter Notebook está hospedado no Microsoft Azure para conveniência dos jurados, os quais contarão com uma solução funcional sem nenhuma necessidade de configuração local. De forma que não há nenhuma licença envolvida nessa etapa.
+
+No ambiente de produção, cabe ao cliente escolher a plataforma onde desejará hospedar a solução, podendo ser rodado em qualquer ambiente operacional, inclusive em computadores locais.
+
+Com relação a interface do usuário, que roda no QlikSense, foi escolhido pois o CNJ possui licenças para o utilização do mesmo, e pode usar essa tecnologia caso assim o deseje.
+
+Todavia, o motivo principal da escolha foi o curto tempo disponível para desenvolvimento. Com a intenção de entregar a melhor interface possível, no tempo disponível, o QlikSense se mostrou uma boa escolha.
+
+Por fim, e caso o licenciamento se mostre um empecilho, sugere-se a evolução da solução e construção de uma interface com o usuário baseada em HTML5 e livre de ônus de licenciamento.
+
+
+## ÁREAS DE CONHECIMENTO E TÉCNICAS ENVOLVIDAS
+Solução multidisciplinar que envolve, entre outras, as seguintes competências:
+- Análise de dados;
+- Business Intelligence - BI;
+- Ciências de Dados;
+- Inteligência Artificial;
+- Python;
+- Jupyter Notebooks;
+- QlikSense;
+- Inteligência negocial na área de Direito.
 
 
 ## EVOLUÇÕES SUGERIDAS

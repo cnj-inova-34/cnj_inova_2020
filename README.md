@@ -5,7 +5,7 @@
 - Thiago Gontijo
 - Henrique Bona
 
-## HISTÓRIAS / DORES DOS USUÁRIOS
+## PROBLEMA A SER SOLUCIONADO
 ### **RELATO 03: CIDADÃO - AÇÃO NA VARA DE FAMÍLIA**
 Josué, 31 anos, sem curso superior e desempregado, ajuizou uma ação na Vara de Família para ter a guarda de sua filha de 2 anos, Sara.
 Está muito preocupado porque **NÃO SABE QUANTO TEMPO SEU PROCESSO IRÁ DURAR** e tem medo de que acabe perdendo a infância da sua única filha brigando
@@ -36,7 +36,13 @@ São consideradas como variáveis as informações de Tribunal, Classe Processua
 
 ### Painel ESTATÍSTICAS | TEMPO MÉDIO DA DECISÃO
 Plataforma dinâmica, simples e intuitiva, que possibilita ao usuário uma experiência prática e efetiva sobre o tempo de tramitação processual
-até a decisão final, na primeira instância da Justiça Federal, com ou sem mérito.
+até a decisão, na primeira instância da Justiça Federal, com ou sem mérito.
+
+
+## PRINCIPAIS MÉTRICA DA SOLUÇÃO
+A métrica utilizada na solução proposta e a **média de tempo decorrido entre o ajuizamento do processo, e a primeira decisão relevante do mesmo**.
+Ressalta-se a importância da **relevância da decisão**, visto que várias decisões são tomadas ao longo do processo. Sendo várias delas relacionadas aos trãmites processuais, e não ao julgamento do processo em si.
+Sendo que o tempo até o efetivo julgamento, e decisão relacionada, é o que importa para as partes envolvidas no processo.
 
 
 ## ESCOPO DA SOLUÇÃO

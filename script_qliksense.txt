@@ -60,4 +60,4 @@ Load
 Resident 
 	[INDICADOR_CNJ_INOVA]
 where
-	[Anos para Decisão] > 0.5;
+	[Anos para Decisão] > 0.15;
